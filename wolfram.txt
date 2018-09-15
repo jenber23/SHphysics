@@ -1,0 +1,11 @@
+https://products.wolframalpha.com/api/libraries/javascript/
+
+^^
+
+app id: UG8RE7-4E9A45JE49
+
+signup here: http://developer.wolframalpha.com/portal/myapps/
+
+
+
+https://products.wolframalpha.com/api/libraries/javascript/WolframAlphaAPI.js.html
