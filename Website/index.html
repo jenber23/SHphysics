@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<h1>Make this Page</h1>
-=======
 <!DOCTYPE html>
 <html>
   <head>
@@ -77,6 +74,56 @@
    font-size: 1em;
   }
   </style>
+
+  <script>
+      function assignVars(){
+         var y = document.getElementById("displacement").value;
+         var vi = document.getElementById("velocity").value;
+         var a = document.getElementById("acceleration").value;
+         var t = document.getElementById("time").value;
+
+          document.getElementById("yVal").innerHTML = y;
+          document.getElementById("viVal").innerHTML = vi;
+          document.getElementById("aVal").innerHTML= a;
+          document.getElementById("tVal").innerHTML= t;
+
+          checkInputs(y, vi, a, t);
+      }
+
+      function checkInputs(y, vi, a, t){
+          //var answer = document.getElementById("ans").value ;
+         var answer;
+          if (y == "")
+          {
+              //document.write("solving for y");
+              answer = vi*t + 0.5*a*t*t;
+          }
+          else if(a == "")
+          {
+              document.write("solving for a");
+              answer = 2 * (y - v *t);
+              answer /= (t*t);
+          }
+          else if ( vi == "")
+          {
+              document.write("solving for vi");
+              answer = (y - 0.5* a * t * t ) / t;
+          }
+          else if(t == "")
+          {
+              document.write("solving for t");
+              var c = (2.0/a)*(y - vi * t);
+              Math.abs(c);
+              answer = Math.sqrt(c);
+          }
+          else
+          {
+              document.write("Please fill in 3 fields.");
+          }
+          document.getElementById("ans").innerHTML = answer;
+      }
+
+  </script>
   </head>
 <body>
   <header>
@@ -97,6 +144,30 @@
       </div>
   <p>Enter in Known Variables:</p>
   <footer>Made by ...... @ ShellHacks2018</footer>
+
+  <form>
+      Displacement:
+      <input type="number" id="displacement"> s(t) <br>
+      <br>
+      Velocity:
+      <input type="number" id="velocity"> m/s <br>
+      <br>
+      Acceleration:
+      <input type="number" id="acceleration"> m/s&sup2; <br>
+      <br>
+      Time:
+      <input type="number" id="time"> s <br>
+      <br>
+  </form>
+  <button onclick="assignVars()"> Test :D</button>
+
+  <div id="yVal"></div>
+  <div id="aVal"></div>
+  <div id="tVal"></div>
+  <div id="viVal"></div>
+
+  answer is:
+  <div id="ans"></div>
+
 </body>
 </html>
->>>>>>> f8f12ca756489dd67d81d2bee10d0aa2bf4a807a
