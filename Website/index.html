@@ -16,11 +16,45 @@
       left: 0;
       right: 0;
       width: 100%;
-      height: 90px;
+      height: 70px;
       background-color: #A3E4D7;
     }
 
-    .db {
+
+
+    .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 0;
+    background-color: #F4D03F;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    padding: 70px 0; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    /*.db {
       background-color: #F4D03F;
       color: white;
       padding: 21px;
@@ -59,7 +93,7 @@
 
   .dd:hover .db {
     background-color: #D7AD08;
-  }
+  }*/
   h1 {
     color: black;
     -webkit-text-fill-color: white;
@@ -95,23 +129,19 @@
          var answer;
           if (y == "")
           {
-              //document.write("solving for y");
               answer = vi*t + 0.5*a*t*t;
           }
           else if(a == "")
           {
-              document.write("solving for a");
               answer = 2 * (y - v *t);
               answer /= (t*t);
           }
           else if ( vi == "")
           {
-              document.write("solving for vi");
               answer = (y - 0.5* a * t * t ) / t;
           }
           else if(t == "")
           {
-              document.write("solving for t");
               var c = (2.0/a)*(y - vi * t);
               Math.abs(c);
               answer = Math.sqrt(c);
@@ -123,17 +153,25 @@
           document.getElementById("ans").innerHTML = answer;
       }
 
+
   </script>
   </head>
 <body>
   <header>
-  <center><h1>ShellHacks Physics</h1></center>
+  <center><h1 style = font-size: 70px>Projectile Motion</h1></center>
   <hr>
 </header>
-  <p></p>
-  <center><p style = font-size:1.4em>Projectile Motion</p><center>
     <p></p>
-      <div class="dd">
+
+
+  <div class="sidenav">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+      <!--<div class="dd">
         <button class="db">Select an Equation</button>
         <div class="dd-content">
           <a href="#">v=v<sub>0</sub>+at</a>
@@ -141,33 +179,40 @@
           <a href="#">x=v<sub>0</sub>t+&frac12at<sup>2</sup></a>
           <a href="#">v<sup>2</sup>=v<sub>0</sub><sup>2</sup>+2ax</a>
         </div>
-      </div>
-  <p>Enter in Known Variables:</p>
-  <footer>Made by ...... @ ShellHacks2018</footer>
+      </div>-->
 
-  <form>
-      Displacement:
-      <input type="number" id="displacement"> s(t) <br>
-      <br>
-      Velocity:
-      <input type="number" id="velocity"> m/s <br>
-      <br>
-      Acceleration:
-      <input type="number" id="acceleration"> m/s&sup2; <br>
-      <br>
-      Time:
-      <input type="number" id="time"> s <br>
-      <br>
-  </form>
-  <button onclick="assignVars()"> Test :D</button>
 
-  <div id="yVal"></div>
-  <div id="aVal"></div>
-  <div id="tVal"></div>
-  <div id="viVal"></div>
 
-  answer is:
-  <div id="ans"></div>
+  <div class="main">
+
+    <center><p>Enter in Known Variables:</p><center>
+      <footer>Made by ShellHacks Physics @ ShellHacks2018</footer>
+
+      <form>
+        Displacement:
+        <input type="number" id="displacement"> s(t) <br>
+        <br>
+        Velocity:
+        <input type="number" id="velocity"> m/s <br>
+        <br>
+        Acceleration:
+        <input type="number" id="acceleration"> m/s&sup2; <br>
+        <br>
+        Time:
+        <input type="number" id="time"> s <br>
+        <br>
+      </form>
+      <button onclick="assignVars()"> Test :D</button>
+
+      <div id="yVal"></div>
+      <div id="aVal"></div>
+      <div id="tVal"></div>
+      <div id="viVal"></div>
+
+      <p></p>
+      Answer is:
+      <div id="ans"></div>
+  </div>
 
 </body>
 </html>
