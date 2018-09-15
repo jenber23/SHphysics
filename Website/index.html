@@ -7,7 +7,7 @@
         background-image: linear-gradient(#A3E4D7, white);
         background-size: 100px 900px;
         font-family: monospace ;
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 
     header{
@@ -16,20 +16,32 @@
       left: 0;
       right: 0;
       width: 100%;
-      height: 70px;
+      height: 90px;
       background-color: #A3E4D7;
+      font-size: 25px;
     }
 
+    .sidenavtop {
+      height:17%;
+      width:250px;
+      position:fixed;
+      z-index:1;
+      top:127.5px;
+      left:0;
+      background-color: gold;
+      font-size:150%;
+      font-weight:bold;
+    }
 
 
     .sidenav {
     height: 100%;
-    width: 200px;
+    width: 250px;
     position: fixed;
     z-index: 1;
-    top: 100px;
+    top: 127.5px;
     left: 0;
-    background-color: #F4D03F;
+    background-color: #64C9CB;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -43,57 +55,18 @@
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #4D4D4D;
 }
 
 .main {
-    padding: 70px 0; /* Same as the width of the sidenav */
+    padding: 70px 0;
+    /* Same as the width of the sidenav */
 }
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-    /*.db {
-      background-color: #F4D03F;
-      color: white;
-      padding: 21px;
-      font-size: 17px;
-      border: solid;
-      cursor: pointer;
-    }
-
-    .dd {
-      position: relative;
-      display: inline-block;
-    }
-
-  .dd-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    z-index: 1;
-  }
-
-  .dd-content a {
-    color: black;
-    padding: 12px 18px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dd-content a:hover {
-    background-color: lightgrey
-  }
-
-  .dd:hover .dd-content {
-    display: block;
-  }
-
-  .dd:hover .db {
-    background-color: #D7AD08;
-  }*/
   h1 {
     color: black;
     -webkit-text-fill-color: white;
@@ -158,36 +131,28 @@
   </head>
 <body>
   <header>
-  <center><h1 style = font-size: 70px>Projectile Motion</h1></center>
+  <center><h1>Projectile Motion</h1></center>
   <hr>
 </header>
     <p></p>
 
 
   <div class="sidenav">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+<center><p style = "font-size:150%">Select an Equation</p></center>
+    <a href="#">v=v<sub>0</sub>+at</a>
+    <a href="#">x=(v+v<sub>0</sub>)*t/2</a>
+    <a href="#">x=v<sub>0</sub>t+&frac12at<sup>2</sup></a>
+    <a href="#">v<sup>2</sup>=v<sub>0</sub><sup>2</sup>+2ax</a>
   </div>
 
-      <!--<div class="dd">
-        <button class="db">Select an Equation</button>
-        <div class="dd-content">
-          <a href="#">v=v<sub>0</sub>+at</a>
-          <a href="#">x=(v+v<sub>0</sub>)*t/2</a>
-          <a href="#">x=v<sub>0</sub>t+&frac12at<sup>2</sup></a>
-          <a href="#">v<sup>2</sup>=v<sub>0</sub><sup>2</sup>+2ax</a>
-        </div>
-      </div>-->
 
-
+  <div class="sidenavtop">
+    <center><p style = "color:white">Select an Equation</p></center>
+  </div>
 
   <div class="main">
 
     <center><p>Enter in Known Variables:</p><center>
-      <footer>Made by ShellHacks Physics @ ShellHacks2018</footer>
-
       <form>
         Displacement:
         <input type="number" id="displacement"> s(t) <br>
@@ -212,7 +177,9 @@
       <p></p>
       Answer is:
       <div id="ans"></div>
+      <center><footer>Made by ShellHacksPhysics Team @ ShellHacks2018</footer></center>
   </div>
+
 
 </body>
 </html>
