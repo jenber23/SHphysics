@@ -6,14 +6,49 @@
     body {
         background: lightblue;
         font-family: monospace;
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
-    section {
-           padding: 20px;
-           margin: 30px;
-           background-color: cornsilk;
-           border: 6px solid gold;
+
+    .db {
+      background-color: #FED636;
+      color: white;
+      padding: 21px;
+      font-size: 17px;
+      border: solid;
+      cursor: pointer;
     }
+
+    .dd {
+      position: relative;
+      display: inline-block;
+    }
+
+  .dd-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  .dd-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dd-content a:hover {
+    background-color: lightgrey
+  }
+
+  .dd:hover .dd-content {
+    display: block;
+  }
+
+  .dd:hover .db {
+    background-color: #D7AD08;
+  }
   </style>
   </head>
 <body>
@@ -21,13 +56,15 @@
   <hr>
 
   <center><b>Projectile Motion</b><center>
-  <section>
-      <form>
-      Select an Equation:<br>
-        <input type="text" name="equation"><br>
-      </form>
-      <p>y = Voyt+(1/2)at^2</p>
-  </section>
+      <div class="dd">
+        <button class="db">Select an Equation</button>
+        <div class="dd-content">
+          <a href="#">v=v0+at</a>
+          <a href="#">x=(v+v0)*t/2</a>
+          <a href="#">x=v0t+(1/2)at^2</a>
+          <a href="#">v^2=v0^2+2ax</a>
+        </div>
+      </div>
   <p>Enter in known variables:</p>
 </body>
 </html>
