@@ -4,7 +4,7 @@
     <title>ShPhysics</title>
     <style>
     body {
-        background-image: linear-gradient(#A3E4D7, white);
+        background-image: linear-gradient(#8FDAD9, white);
         background-size: 100px 900px;
         font-family: monospace ;
         font-size: 1.6em;
@@ -16,9 +16,9 @@
       left: 0;
       right: 0;
       width: 100%;
-      height: 90px;
-      background-color: #A3E4D7;
-      font-size: 25px;
+      height: 95px;
+      background-color: #8FDAD9;
+      font-size: 26px;
     }
 
     .sidenavtop {
@@ -26,7 +26,7 @@
       width:250px;
       position:fixed;
       z-index:1;
-      top:127.5px;
+      top:132.5px;
       left:0;
       background-color: gold;
       font-size:150%;
@@ -39,7 +39,7 @@
     width: 250px;
     position: fixed;
     z-index: 1;
-    top: 127.5px;
+    top: 133px;
     left: 0;
     background-color: #64C9CB;
     overflow-x: hidden;
@@ -59,9 +59,20 @@
 }
 
 .main {
-    padding: 70px 0;
-    /* Same as the width of the sidenav */
+    padding: 50px 0;
+    width:30%;
+    margin-left:462.5px;
 }
+
+.main  p{
+  display: inline-block;
+}
+
+.main input{
+  display:inline-block;
+  float: right;
+}
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -152,20 +163,20 @@
 
   <div class="main">
 
-    <center><p>Enter in Known Variables:</p><center>
+    <p style = "font-size:150%">Enter in Known Variables:</p>
       <form>
-        Displacement:
-        <input type="number" id="displacement"> s(t) <br>
-        <br>
-        Velocity:
-        <input type="number" id="velocity"> m/s <br>
-        <br>
-        Acceleration:
-        <input type="number" id="acceleration"> m/s&sup2; <br>
-        <br>
-        Time:
-        <input type="number" id="time"> s <br>
-        <br>
+
+        <p>Displacement:</p>
+        <input type="number" id="displacement"> s(t)
+
+        <p>Velocity:</p>
+        <input type="number" id="velocity"> m/s
+
+        <p>Acceleration:</p>
+        <input type="number" id="acceleration"> m/s&sup2;
+
+        <p>Time:</p>
+        <input type="number" id="time"> s
       </form>
       <button onclick="assignVars()"> Test :D</button>
 
