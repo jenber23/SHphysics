@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project:Motion</title>
+    <style>
+    body {
+        background-image: linear-gradient(#8FDAD9, white);
+        background-size: 100px 900px;
+        font-family: monospace ;
+        font-size: 1.6em;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    header{
+      position:relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 95px;
+      background-color: #8FDAD9;
+      font-size: 26px;
+    }
+
+    .sidenavtop {
+      height:11%;
+      width:350px;
+      position:fixed;
+      z-index:1;
+      top:132.5px;
+      left:50px;
+      background-image:linear-gradient(#a1e0e0,#a5e5e5);
+      font-size:150%;
+      font-weight:bold;
+    }
+
+
+    .sidenav {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 133px;
+    left:50px;
+    background-image: linear-gradient(#a1e0e0, white);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 10px 10px 15px 40px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+.sidenav a:hover {
+    color: #4D4D4D;
+    border-color: black;
+    border-style: solid;
+}
+
+.main {
+    padding: 0px 0;
+    width:30%;
+    margin-left:575px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  h1 {
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+  footer{
+    position:absolute;
+   bottom:0;
+   width:100%;
+   height:50px;
+   font-size: 1em;
+  }
+
+  .middle {
+    top:132.5px;
+    font-weight: bold;
+  }
+  .end{
+    float:right;
+  }
+
+  </style>
+
+  <script>
+      function assignVars(){
+         var y = document.getElementById("displacement").value;
+         var vi = document.getElementById("velocity").value;
+         var a = document.getElementById("acceleration").value;
+         var t = document.getElementById("time").value;
+
+          document.getElementById("yVal").innerHTML = y;
+          document.getElementById("viVal").innerHTML = vi;
+          document.getElementById("aVal").innerHTML= a;
+          document.getElementById("tVal").innerHTML= t;
+
+          checkInputs(y, vi, a, t);
+      }
+
+      function checkInputs(y, vi, a, t){
+          //var answer = document.getElementById("ans").value ;
+         var answer;
+          if (y == "")
+          {
+              answer = vi*t + 0.5*a*t*t;
+          }
+          else if(a == "")
+          {
+              answer = 2 * (y - v *t);
+              answer /= (t*t);
+          }
+          else if ( vi == "")
+          {
+              answer = (y - 0.5* a * t * t ) / t;
+          }
+          else if(t == "")
+          {
+              var c = (2.0/a)*(y - vi * t);
+              Math.abs(c);
+              answer = Math.sqrt(c);
+          }
+          else
+          {
+              document.write("Please fill in 3 fields.");
+          }
+          document.getElementById("ans").innerHTML = answer;
+      }
+
+
+  </script>
+  </head>
+<body>
+  <header>
+  <center><h1>Projectile Motion</h1></center>
+  <hr>
+</header>
+    <p></p>
+
+
+  <div class="sidenav">
+<center><p style = "font-size:150%">Select an Equation</p></center>
+
+    <a href="#">v=v<sub>0</sub>+at</a>
+    <a href="#">x=&frac12(v+v<sub>0</sub>)t</a>
+    <a href="#">x=v<sub>0</sub>t+&frac12at<sup>2</sup></a>
+    <a href="#">v<sup>2</sup>=v<sub>0</sub><sup>2</sup>+2ax</a>
+  </div>
+
+
+  <div class="sidenavtop">
+    <center><p style = "color:black">Select an Equation</p></center>
+
+  </div>
+
+  <div class="middle">
+    <center><p style = "font-size:150%">Enter Known Variables</p><center>
+
+  </div>
+
+  <div class="end">
+    <p style = "color:#a5e5e5">Visual Aid</p><br>
+  </div>
+<img src="projectile_motion.jpg" alt="Projectile Motion"; width="300"; height="300"; style = "float:right">
+  <div class="main">
+      <form>
+
+        <p>Displacement:</p>
+        <input type="number" id="displacement"> m
+
+        <p>Velocity:</p>
+        <input type="number" id="velocity"> m/s
+
+        <p>Acceleration:</p>
+        <input type="number" id="acceleration"> m/s&sup2;
+
+        <p>Time:</p>
+        <input type="number" id="time"> s
+      </form>
+      <button onclick="assignVars()"> Test :D</button>
+
+      <div id="yVal"></div>
+      <div id="aVal"></div>
+      <div id="tVal"></div>
+      <div id="viVal"></div>
+
+      <p></p>
+      Answer is:
+      <div id="ans"></div>
+
+<<<<<<< HEAD
+  </div>
+
+=======
+</div>
+>>>>>>> 839287bba0572ca5fd4f39e961c44fec90c346ff
+<center><footer>Made by Project: Motion Team @ ShellHacks2018</footer><center>
+
+</body>
+</html>
