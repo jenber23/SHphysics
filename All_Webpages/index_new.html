@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ShPhysics</title>
+  <link rel="stylesheet" type="text/css" href="Denisse.css">
+  <script src="jen.js"></script>
+  </head>
+<body>
+  <header>
+  <center><h1>Projectile Motion</h1></center>
+  <hr>
+</header>
+    <p></p>
+
+
+  <div class="sidenav">
+<center><p style = "font-size:150%">Select an Equation</p></center>
+
+    <a href="#">v=v<sub>0</sub>+at</a>
+    <a href="#">x=&frac12(v+v<sub>0</sub>)t</a>
+    <a href="#">x=v<sub>0</sub>t+&frac12at<sup>2</sup></a>
+    <a href="#">v<sup>2</sup>=v<sub>0</sub><sup>2</sup>+2ax</a>
+  </div>
+
+
+  <div class="sidenavtop">
+    <center><p style = "color:black">Select an Equation</p></center>
+  </div>
+
+  <div class="middle">
+    <center><p style = "font-size:150%">Enter Known Variables</p><center>
+  </div>
+
+
+  <div class="main">
+      <form>
+
+        <p>Displacement:</p>
+        <input type="number" id="displacement"> m
+
+        <p>Velocity:</p>
+        <input type="number" id="velocity"> m/s
+
+        <p>Acceleration:</p>
+        <input type="number" id="acceleration"> m/s&sup2;
+
+        <p>Time:</p>
+        <input type="number" id="time"> s
+      </form>
+      <button onclick="assignVars()"> Test :D</button>
+
+      <div id="yVal"></div>
+      <div id="aVal"></div>
+      <div id="tVal"></div>
+      <div id="viVal"></div>
+
+      <p></p>
+      Answer is:
+      <div id="ans"></div>
+
+</div>
+<center><footer>Made by ShellHacksPhysics Team @ ShellHacks2018</footer><center>
+
+</body>
+</html>

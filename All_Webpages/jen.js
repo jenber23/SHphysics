@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-<title>Web Page Design</title>
-<head>
-    <script>
 
         function equationOne()
         {
@@ -168,36 +163,4 @@
             }
             return assignVars();
         }
-    </script>
-</head>
-<body>
-    <form>
-        Displacement:
-        <input type="number" id="displacement"> s(t) <br>
-        <br>
-        Velocity:
-        <input type="number" id="velocity"> m/s <br>
-        <br>
-        Acceleration:
-        <input type="number" id="acceleration"> m/s&sup2; <br>
-        <br>
-        Time:
-        <input type="number" id="time"> s <br>
-        <br>
-    </form>
-    <!--<button onclick="assignVars()"> Test :D</button>-->
-    <button onclick="equationOne()"> Test :D</button>
-
-    <div id="yVal"></div>
-    <div id="aVal"></div>
-    <div id="tVal"></div>
-    <div id="viVal"></div>
-
-    answer is:
-    <div id="ans"></div>
-
-
-
-
-</body>
-</html>
+    
