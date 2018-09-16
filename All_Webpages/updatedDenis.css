@@ -66,15 +66,6 @@ font-size: 80%
 
 }
 
-/*.main  p{
-display: inline-block;
-}
-
-.main input{
-display:inline-block;
-float: right;
-}*/
-
 
 @media screen and (max-height: 450px) {
 .sidenav {padding-top: 15px;}
