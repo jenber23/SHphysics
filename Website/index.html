@@ -8,6 +8,8 @@
         background-size: 100px 900px;
         font-family: monospace ;
         font-size: 1.6em;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     header{
@@ -22,13 +24,13 @@
     }
 
     .sidenavtop {
-      height:17%;
-      width:250px;
+      height:11%;
+      width:350px;
       position:fixed;
       z-index:1;
       top:132.5px;
-      left:0;
-      background-color: gold;
+      left:50px;
+      background-image:linear-gradient(#a1e0e0,#a5e5e5);
       font-size:150%;
       font-weight:bold;
     }
@@ -36,42 +38,45 @@
 
     .sidenav {
     height: 100%;
-    width: 250px;
+    width: 350px;
     position: fixed;
     z-index: 1;
     top: 133px;
-    left: 0;
-    background-color: #64C9CB;
+    left:50px;
+    background-image: linear-gradient(#a1e0e0, white);
     overflow-x: hidden;
     padding-top: 20px;
 }
 
 .sidenav a {
-    padding: 6px 6px 6px 32px;
+    padding: 10px 10px 15px 40px;
     text-decoration: none;
-    font-size: 25px;
-    color: white;
+    font-size: 30px;
+    color: black;
     display: block;
+    text-align: center;
 }
 
 .sidenav a:hover {
     color: #4D4D4D;
+    border-color: black;
+    border-style: solid;
 }
 
 .main {
-    padding: 50px 0;
+    padding: 0px 0;
     width:30%;
-    margin-left:462.5px;
+    margin-left:575px;
 }
 
-.main  p{
+/*.main  p{
   display: inline-block;
 }
 
 .main input{
   display:inline-block;
   float: right;
-}
+}*/
 
 
 @media screen and (max-height: 450px) {
@@ -91,6 +96,12 @@
    height:50px;
    font-size: 1em;
   }
+
+  .middle {
+    top:132.5px;
+    font-weight: bold;
+  }
+
   </style>
 
   <script>
@@ -150,24 +161,28 @@
 
   <div class="sidenav">
 <center><p style = "font-size:150%">Select an Equation</p></center>
+
     <a href="#">v=v<sub>0</sub>+at</a>
-    <a href="#">x=(v+v<sub>0</sub>)*t/2</a>
+    <a href="#">x=&frac12(v+v<sub>0</sub>)t</a>
     <a href="#">x=v<sub>0</sub>t+&frac12at<sup>2</sup></a>
     <a href="#">v<sup>2</sup>=v<sub>0</sub><sup>2</sup>+2ax</a>
   </div>
 
 
   <div class="sidenavtop">
-    <center><p style = "color:white">Select an Equation</p></center>
+    <center><p style = "color:black">Select an Equation</p></center>
   </div>
 
-  <div class="main">
+  <div class="middle">
+    <center><p style = "font-size:150%">Enter Known Variables</p><center>
+  </div>
 
-    <p style = "font-size:150%">Enter in Known Variables:</p>
+
+  <div class="main">
       <form>
 
         <p>Displacement:</p>
-        <input type="number" id="displacement"> s(t)
+        <input type="number" id="displacement"> m
 
         <p>Velocity:</p>
         <input type="number" id="velocity"> m/s
@@ -188,9 +203,9 @@
       <p></p>
       Answer is:
       <div id="ans"></div>
-      <center><footer>Made by ShellHacksPhysics Team @ ShellHacks2018</footer></center>
-  </div>
 
+  </div>
+<center><footer>Made by ShellHacksPhysics Team @ ShellHacks2018</footer><center>
 
 </body>
 </html>
